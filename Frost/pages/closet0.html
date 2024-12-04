@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>霜玥-衣櫃</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="row">
+                <div class="logo">
+                    <img src="../img/首頁/LOGO.png" alt="logo" style="width:60px;height:60px;">
+                </div>
+
+                <div class="title">
+                    <h2>Frost</h2>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="row">
+                <div class="side">
+                    <div class="sticky">
+                        <button class="acc" value="首頁" onclick="location.href='../index.html'">首頁</button>
+                        <button class="accordion">霜玥</button>
+                        <div class="panel">
+                            <button class="acc" value="設定" onclick="location.href='../pages/intro.html'">設定</button>
+                            <button class="acc" value="衣櫃" onclick="location.href='../pages/closet.html'">衣櫃</button>
+                            <button class="acc" value="像素" onclick="location.href='../pages/pixel.html'">像素</button>
+                            <button class="acc" value="吉祥物" onclick="location.href='../pages/mascot.html'">吉祥物</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <h3 class="primary" >衣櫃</h3>
+                    <div class="images-pixel">
+                        <img src="../img/pictures/設定頁4.png" alt="" class="image-pixel" width="400">
+                        <img src="../img/pictures/衣櫃5.png" alt="" class="image-pixel" width="400">
+                    </div>
+                    <div class="text-row">
+                        <div class="text">類型：戰鬥服<br>繪師：缺幣咪瓜</div>
+                        <div class="text">類型：休閒服<br>繪師：九位</div>
+                    </div>
+                    <div class="images-pixel">
+                      <img src="../img/pictures/衣櫃3.jpg" alt="" class="image-pixel" width="400">
+                      <img src="../img/pictures/衣櫃6.png" alt="" class="image-pixel" width="400">
+                  </div>
+                  <div class="text-row">
+                      <div class="text">類型：魔法<br>繪師：好運汪汪來</div>
+                      <div class="text">類型：休閒服<br>繪師：JT</div>
+                  </div>
+                  <div class="images-pixel">
+                    <img src="../img/pictures/衣櫃1.jpg" alt="" class="image-pixel" width="400">
+                    <img src="../img/pictures/衣櫃4.jpg" alt="" class="image-pixel" width="400">
+                </div>
+                <div class="text-row">
+                    <div class="text">類型：外出服<br>繪師：揪結</div>
+                    <div class="text">類型：休閒服<br>繪師：Misuto</div>
+                </div>
+                <div class="images-pixel">
+                  <img src="../img/pictures/設定頁9.png" alt="" class="image-pixel" width="400">
+                  <img src="../img/pictures/設定頁17.jpg" alt="" class="image-pixel" width="400">
+              </div>
+              <div class="text-row">
+                  <div class="text">類型：戰鬥服<br>繪師：MIU</div>
+                  <div class="text">類型：戰鬥服<br>繪師：金魚</div>
+              </div>
+                  <div class="images-pixel">
+                    <img src="../img/pictures/設定頁14.png" alt="" class="image-pixel" width="400">
+                    <img src="../img/pictures/設定頁13.jpg" alt="" class="image-pixel" width="400">
+                </div>
+                <div class="text-row">
+                    <div class="text">類型：戰鬥服<br>繪師：瀨良</div>
+                    <div class="text">類型：戰鬥服（毛刷版）<br>繪師：坊 某</div>
+                </div>
+                <br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="grid">
+                <br>
+                <div class="up">
+                    <h4>© by Misuto</h4>
+                </div>
+                <div class="right">
+                    <img src="../img/首頁/fb.png" alt="fb" style="width:30px;height:30px;" class="icon">
+                    <img src="../img/首頁/x.png" alt="x" style="width:30px;height:30px;" class="icon">
+                    <img src="../img/首頁/ig.png" alt="ig" style="width:30px;height:30px;" class="icon">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

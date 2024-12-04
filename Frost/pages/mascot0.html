@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>霜玥-吉祥物</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="row">
+                <div class="logo">
+                    <img src="../img/首頁/LOGO.png" alt="logo" style="width:60px;height:60px;">
+                </div>
+
+                <div class="title">
+                    <h2>Frost</h2>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="row">
+                <div class="side">
+                    <div class="sticky">
+                        <button class="acc" value="首頁" onclick="location.href='../index.html'">首頁</button>
+                        <button class="accordion">霜玥</button>
+                        <div class="panel">
+                            <button class="acc" value="設定" onclick="location.href='../pages/intro.html'">設定</button>
+                            <button class="acc" value="衣櫃" onclick="location.href='../pages/closet.html'">衣櫃</button>
+                            <button class="acc" value="像素" onclick="location.href='../pages/pixel.html'">像素</button>
+                            <button class="acc" value="吉祥物" onclick="location.href='../pages/mascot.html'">吉祥物</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <h3 class="primary" >吉祥物</h3>
+                    <div class="images-pixel">
+                        <img src="../img/pictures/吉祥物4.png" alt="" class="image-pixel" width="400">
+                        <img src="../img/pictures/吉祥物1.png" alt="" class="image-pixel" width="400">
+                    </div>
+                    <div class="text-row">
+                        <div class="text">繪師：ㄒㄒ</div>
+                        <div class="text">繪師：小物仙人</div>
+                    </div>
+                    <div class="images-pixel">
+                      <img src="../img/pictures/吉祥物5.png" alt="" class="image-pixel" width="400">
+                      <img src="../img/pictures/吉祥物2.jpg" alt="" class="image-pixel" width="400">
+                  </div>
+                  <div class="text-row">
+                      <div class="text">繪師：ㄒㄒ</div>
+                      <div class="text">繪師：轉蛋</div>
+                  </div>
+                  <div class="images-pixel">
+                    <img src="../img/pictures/吉祥物6.jpg" alt="" class="image-pixel" width="400">
+                    <img src="../img/pictures/吉祥物3.png" alt="" class="image-pixel" width="400">
+                </div>
+                <div class="text-row">
+                    <div class="text">繪師：雷宴</div>
+                    <div class="text">繪師：武器商</div>
+                </div>
+                  <br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="grid">
+                <br>
+                <div class="up">
+                    <h4>© by Misuto</h4>
+                </div>
+                <div class="right">
+                    <img src="../img/首頁/fb.png" alt="fb" style="width:30px;height:30px;" class="icon">
+                    <img src="../img/首頁/x.png" alt="x" style="width:30px;height:30px;" class="icon">
+                    <img src="../img/首頁/ig.png" alt="ig" style="width:30px;height:30px;" class="icon">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

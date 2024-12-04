@@ -1,0 +1,420 @@
+
+body{
+    
+    background-color:#F0F9FC;
+    color:#3186DA;
+    font-family: sans-serif;
+    
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+
+
+.header{
+    color:#376695;
+    background-color:#C4DEF1;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    
+    position: relative;
+}
+
+.wrapper {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    height: 700px;   
+    background-color:#F0F9FC;
+    display: flex;
+    justify-content: center;
+    
+}
+.main1{
+  height: 100%;   
+  background-color:#F0F9FC;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo{
+    padding-top: 0px;
+    
+}
+.title{
+    position: relative;
+    top: 50%;
+    padding-top: 0;
+    margin-top: -40px;/* 再調 */
+    width: 80px;
+    text-align: center;
+}
+
+
+h2{
+    font-size:28px;
+    font-weight: 600;
+    }
+h3{
+    font-size:24px;
+    }
+h4{
+    font-size:20px;
+    }
+
+.row{
+    
+    display: flex;
+    justify-content: space-evenly;
+    
+}    
+
+.right{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.icon{
+    padding-right: 30px;
+    padding-top: 20px;
+    margin-bottom: 0px;
+
+}
+
+/*
+選單線
+*/
+.line {
+    width: 60px;
+    height: 28px;
+    background: rgba(255,255,2255,0);
+    cursor: pointer;
+    display: block;
+    padding: 16px;
+    position: absolute;
+    z-index: 2;
+  }
+  .line .menu,
+  .line .menu::before,
+  .line .menu::after {
+    background: #376695;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: background ease 0.15s, top ease 0.15s 0.15s, transform ease 0.15s;
+    width: 20px;
+  }
+  .line .menu {
+    left: 18px;
+    top: 27px;
+  }
+  
+  .line .menu::before {
+    top: -6px;
+  }
+  
+  .line .menu::after {
+    top: 6px;
+  }
+  /*
+  點選選單變叉叉
+  */
+  #menu:checked + .line .menu {
+    background: transparent;
+  }
+  
+  #menu:checked + .line .menu::before {
+    transform: rotate(45deg);
+  }
+  
+  #menu:checked + .line .menu::after {
+    transform: rotate(-45deg);
+  }
+  
+  #menu:checked + .line .menu::before,
+  #menu:checked + .line .menu::after {
+    top: 0;
+    transition: top ease 0.15s, transform ease 0.15s 0.15s;
+  }
+  
+  /*
+  選單開合
+  */
+  #menu:checked ~ .menu-list {
+    width: 220px;
+  }
+  
+  .menu-list {
+    width: 0px;
+    height: 90%;
+    background: #E5F6FF;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    
+    position:absolute;
+    z-index: 1;
+    transition: all 0.3s;
+    overflow: hidden;
+    margin-top: 60px;
+    
+  }
+
+  #ml{
+    height: 95%;
+  }
+  
+
+  /*
+  選單向外推
+  */
+  .menu-list ul {
+    list-style: none;
+    margin-left: 220px;
+    padding: 0;
+  }
+  .menu-list ul > li {
+    display: block;
+    width: 100px;
+  }
+  /*
+  隱藏核許框
+  */
+  input#menu {
+    display: none;
+  }
+
+.side{
+    background-color: #E5F6FF;
+    width: 223px;
+    height: auto;
+}
+
+.sticky{
+    position: sticky;
+    top: -60px;
+}
+
+.acc {
+    background-color: #E5F6FF;
+    color: #376695;
+    cursor: pointer;
+    padding-top: 60px;  
+    padding-bottom: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 24px;/* 角色名字大小 */
+    font-weight: 800;
+    transition: 0.4s;
+    padding-left: 60px;
+  }
+.accordion {
+  background-color: #E5F6FF;
+  color: #376695;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 24px;/* 角色名字大小 */
+  font-weight: 800;
+  transition: 0.4s;
+  padding-left: 60px;
+}
+
+.active, .accordion:hover {
+  background-color: #E5F6FF;
+}
+
+.accordion:after {
+  content: '\25BC';
+  width: 5px;
+  height: 5px;
+  color: #376695;
+  font-weight: bold;
+  float: right;
+  margin-right: 50px;
+  padding-top: 5px;
+}
+
+.active:after {
+  content: "\25B2";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #E5F6FF;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/*
+.imgw{
+    width: auto;
+    height: auto;
+    background-color:#F0F9FC;
+}
+.white{
+    width:1217px;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: center;
+    position: relative;
+    
+}
+
+.centerword{
+    position: absolute;
+    z-index: 0;
+    object-position: center;
+    
+    top: 150px;
+    right:150px ;
+    
+    background:rgba(255, 255, 255, 0);
+    width: 707px;
+    height: 87px;
+    
+}*/
+
+
+.centeri{
+  
+  background-image: url("../img/首頁/底圖.jpg");
+  background-repeat: no-repeat;
+  background-position:center center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-size:60%;
+  
+}
+.centerw{
+  padding-top: 23%;
+  text-align: center;
+  
+}
+
+.space{
+  width: 180px;
+}
+
+.footer{
+    color:#376695;
+    background-color:#C4DEF1;
+    width: 100%;
+    height:60px;
+    text-align:center;
+    margin-bottom: 0px; 
+    
+    position: relative; /* 絕對定位 */
+    bottom: 0; /* 固定在底部 */
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+
+.grid{
+
+    margin-bottom: 0px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    
+    background-color:#C4DEF1;
+}
+
+a {
+    text-decoration: none;
+}
+.images{
+    margin : 100px auto;
+    padding : 0px 100px;
+    display : flex;
+    justify-content : space-between;
+}
+
+.sq3{
+  margin-left:5px ;
+  margin-right:5px ;
+}
+
+.imgw-setting{
+    width: 100%;
+    height: auto;
+    display : flex;
+    justify-content : center;
+    flex-direction: row;
+}
+#setting{
+    
+    width:349.6px;
+    height:526px;
+    margin-right: 30px;
+  
+}
+
+
+.setting-content{
+    position: absolute;
+    top: 80%;
+}
+
+.img-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.images-pixel {
+    margin: 50px 10px;
+    display: flex;
+    justify-content: center;
+}
+.image-pixel {
+    margin: 10px 80px;
+    width: 250px;
+    height: 263px;
+}
+.text-row {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+.text {
+    margin: 0 160px;
+    text-align: center;
+}
+
+.primary{
+    background-color:#FFFCE2;
+    color: #3186DA;
+    width: 185px;
+    height: 50px;
+    padding-top:10px;
+    padding-left: 10px;
+    text-align: center;
+}
+.setting-primary{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

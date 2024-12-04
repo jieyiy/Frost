@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>霜玥-設定</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="row">
+                <div class="logo">
+                    <img src="../img/首頁/LOGO.png" alt="logo" style="width:60px;height:60px;">
+                </div>
+
+                <div class="title">
+                    <h2>Frost</h2>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="row">
+                <div class="side">
+                    <div class="sticky">
+                        <button class="acc" value="首頁" onclick="location.href='../index.html'">首頁</button>
+                        <button class="accordion">霜玥</button>
+                        <div class="panel">
+                            <button class="acc" value="設定" onclick="location.href='../pages/intro.html'">設定</button>
+                            <button class="acc" value="衣櫃" onclick="location.href='../pages/closet.html'">衣櫃</button>
+                            <button class="acc" value="像素" onclick="location.href='../pages/pixel.html'">像素</button>
+                            <button class="acc" value="吉祥物" onclick="location.href='../pages/mascot.html'">吉祥物</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgw">
+                    <div class="setting-primary">
+                        <h3 class="primary" >角色設定</h3>
+                    </div>
+                    <div class="imgw-setting">
+                        <p><img src="../img/pictures/人設圖.png" alt="" id="setting">
+                            <br>
+                            基本資料<br>
+                            -性別：男<br>
+                            -年齡：15(214)<br>
+                            -身高：165<br>
+                            <br>
+                            繪製注意事項<br>
+                            -白毛(可因特殊處理調動)<br>
+                            -頭上的光環在以下情況不會出現(學校、一般公共場所)<br>
+                            -右耳有星星耳鏈<br>
+                            -短眉毛</p>
+                    </div>
+                    <div class="images">
+                        <a href="../pages/closet.html">
+                            <img src="../img/衣櫃.png" alt="衣櫃">
+                        </a>
+                        <a href="../pages/pixel.html">
+                            <img src="../img/像素.png" alt="像素">
+                        </a>
+                        <a href="../pages/mascot.html">
+                            <img src="../img/吉祥物.png" alt="吉祥物">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="grid">
+                <br>
+                <div class="up">
+                    <h4>© by Misuto</h4>
+                </div>
+                <div class="right">
+                    <img src="../img/首頁/fb.png" alt="fb" style="width:30px;height:30px;" class="icon">
+                    <img src="../img/首頁/x.png" alt="x" style="width:30px;height:30px;" class="icon">
+                    <img src="../img/首頁/ig.png" alt="ig" style="width:30px;height:30px;" class="icon">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

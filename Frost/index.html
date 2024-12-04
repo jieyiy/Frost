@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All For Frost</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  
+  <div class="wrapper">
+
+    <nav class="nav-box">
+      <input type="checkbox" id="menu">
+      <label for="menu" class="line">
+        <div class="menu"></div>
+      </label>
+    
+      <div class="menu-list">
+        
+          <button class="acc"  value="首頁" onclick="location.href='index.html'">首頁</button> 
+          <button class="accordion" >霜玥</button>
+          <div class="panel">
+            <button class="acc"  value="設定" onclick="location.href='./pages/intro.html'">設定</button>
+            <button class="acc"  value="衣櫃" onclick="location.href='./pages/closet.html'">衣櫃</button>
+            <button class="acc"  value="像素" onclick="location.href='./pages/pixel.html'">像素</button>
+            <button class="acc"  value="吉祥物" onclick="location.href='./pages/mascot.html'">吉祥物</button>
+          </div>
+          
+      </div>
+    </nav>
+
+    <header class="header">
+        <div class="row">
+            <div class="logo">
+                <img src="img/首頁/LOGO.png" alt="logo" style="width:60px;height:60px;" >
+            </div>
+             
+            <div class="title">
+              <h3>Frost</h3>     
+            </div> 
+        
+
+          </div>
+    </header>
+    <div class="main">
+      
+        <div class="centeri">
+
+          <div class="centerw">
+            <h2>Ciao...!初次見面<br>
+              請自由參觀這個屬於霜玥的小小天地叭...!
+            </h2> 
+            <h3>
+              <br><br><br>
+              此頁面僅供本人編輯及委託繪師參考使用
+              網站內所有作品皆禁止抄襲、二度轉載
+              <br>
+              Do not copy, imitate, repost my works without permission.
+            </h3> 
+          </div>
+          
+        </div>
+          <!-- 
+          <div class="imgw" >
+            <div class="white">
+              <img src="img/首頁/image.png" alt="" style="width:1217px;height:824px;" >
+            </div>
+
+            <div class="centerword" >
+                <h2>Ciao...!初次見面<br>
+                  請自由參觀這個屬於霜玥的小小天地叭...!
+                </h2> 
+                <h3>
+                  <br><br><br>
+                  此頁面僅供本人編輯及委託繪師參考使用
+                  網站內所有作品皆禁止抄襲、二度轉載
+                  <br>
+                  Do not copy, imitate, repost my works without permission.
+                </h3> 
+            </div> 
+               
+          </div> -->
+      
+    </div>
+  
+  
+  
+    <footer class="footer">
+      <div class="grid">   
+          <div class="space"></div>
+              
+          <h4>©  by Misuto</h4>
+          
+          <div class="right">
+            <img src="img/首頁/fb.png" alt="fb" style="width:30px;height:30px;" class="icon">
+            <img src="img/首頁/x.png" alt="x" style="width:30px;height:30px;" class="icon">
+            <img src="img/首頁/ig.png" alt="ig" style="width:30px;height:30px;" class="icon">  
+          </div>
+      </div> 
+    </footer> 
+    
+  </div>
+
+
+
+
+<script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+</script>
+</body>  
+</html>
