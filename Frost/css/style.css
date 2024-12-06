@@ -210,8 +210,23 @@ h4{
     background-color: #E5F6FF;
     color: #376695;
     cursor: pointer;
-    padding-top: 60px;  
-    padding-bottom: 18px;
+    padding-top: 10px;  
+    padding-bottom: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;/* 角色名字大小 */
+    font-weight: 600;
+    transition: 0.4s;
+    padding-left: 60px;
+  }
+  .ac {
+    background-color: #E5F6FF;
+    color: #376695;
+    cursor: pointer;
+    padding-top: 50px;  
+    padding-bottom: 10px;
     width: 100%;
     border: none;
     text-align: left;
