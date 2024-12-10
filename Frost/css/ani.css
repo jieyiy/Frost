@@ -1,0 +1,86 @@
+
+
+  .loading-wrapper {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F9FC;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  .container {
+    position: relative;
+    width: 55px;
+    height: 60px;
+    animation: round 1s linear infinite;
+  }
+  .dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #376695;
+    border-radius: 50%;
+  }
+  .dot:nth-child(1) {
+    top: 0;
+    left: calc(50% - 7.5px);
+  }
+  .dot:nth-child(2) {
+    top: calc(33.33% - 7.5px);
+    left: calc(100% - 15px);
+  }
+  .dot:nth-child(3) {
+    top: calc(66.67% - 5px);
+    left: calc(100% - 15px);
+  }
+  .dot:nth-child(4) {
+    top: calc(100% - 15px);
+    left: calc(50% - 7.5px);
+  }
+  .dot:nth-child(5) {
+    top: calc(66.67% - 5px);
+    left: 0;
+  }
+  .dot:nth-child(6) {
+    top: calc(33.33% - 7.5px);
+    left: 0;
+  }
+
+  .dot {
+    animation: fadeAnimation 1s infinite;
+  }
+  @keyframes fadeAnimation {
+    0%, 100% {
+      opacity: 1;
+      transform: none;
+    }
+    50% {
+      opacity: .1667;
+      transform: scale(.8);
+    }
+  }
+
+  .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .dot:nth-child(2) {
+    animation-delay: .1667s;
+  }
+  .dot:nth-child(3) {
+    animation-delay: .3333s;
+  }
+  .dot:nth-child(4) {
+    animation-delay: .5s;
+  }
+  .dot:nth-child(5) {
+    animation-delay: .6667s;
+  }
+  .dot:nth-child(6) {
+    animation-delay: .8333s;
+  }
