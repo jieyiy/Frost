@@ -18,7 +18,7 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-// script.js
+
 let currentIndex = 0;
 
 function moveSlide(direction) {
@@ -38,3 +38,24 @@ function moveSlide(direction) {
     // Update carousel position
     carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
+
+function showPopup(imageUrl) {
+  const popup = document.getElementById('popup');
+  const popupImage = document.getElementById('popup-image');
+
+  // Set the image source
+  popupImage.src = imageUrl;
+
+  // Show the popup
+  popup.style.display = 'flex';
+}
+
+function hidePopup() {
+  const popup = document.getElementById('popup');
+  
+  // Hide the popup
+  popup.style.display = 'none';
+}
+
+
+//480 768s

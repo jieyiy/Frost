@@ -48,6 +48,18 @@
       
       <div class="img-container">
         <h3 class="primary" >衣櫃</h3>
+
+        <div class="gallery">
+          <img src="https://via.placeholder.com/150" alt="Thumbnail 1" onclick="showPopup('https://via.placeholder.com/800')">
+          <img src="https://via.placeholder.com/150" alt="Thumbnail 2" onclick="showPopup('https://via.placeholder.com/800/')">
+      </div>
+  
+      <!-- Popup Container -->
+      <div class="popup" id="popup">
+          <span class="close" onclick="hidePopup()">&times;</span>
+          <img id="popup-image" src="" alt="Large Image">
+      </div>
+
         <div class="images-pixel">
             <img src="../img/pictures/設定頁4.png" alt="" class="image-pixel" width="400">
             <img src="../img/pictures/衣櫃5.png" alt="" class="image-pixel" width="400">
@@ -112,23 +124,10 @@
   </div>
 
 
+  <script src="../js/script.js"></script>
+  <script src="../js/load.js"></script>
+  <script src="../js/acc.js"></script>
 
 
-<script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-        
-        for (i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-              panel.style.maxHeight = null;
-            } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-            } 
-          });
-        }
-</script>
 </body>  
 </html>
