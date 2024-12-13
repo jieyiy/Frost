@@ -17,4 +17,24 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+
+// script.js
 let currentIndex = 0;
+
+function moveSlide(direction) {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    // Remove 'active' class from current item
+    items[currentIndex].classList.remove('active');
+
+    // Update currentIndex
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+
+    // Add 'active' class to the new item
+    items[currentIndex].classList.add('active');
+
+    // Update carousel position
+    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
