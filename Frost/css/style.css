@@ -436,8 +436,11 @@ a {
 
 .carousel {
   position: relative;
-  width: 800px;
+  width: 400px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-inner {
