@@ -312,13 +312,14 @@ h4{
   background-image: url("../img/首頁/底圖.jpg");
   background-repeat: no-repeat;
   background-position:center center;
-  margin-top: 0px;
+  margin-top: 5%;
   margin-bottom: 0px;
+  
   background-size:60%;
   
 }
 .centerw{
-  padding-top: 23%;
+  
   text-align: center;
   
 }
@@ -434,13 +435,18 @@ a {
     align-items: center;
 }
 
-.carousel {
-  position: relative;
-  width: 400px;
-  overflow: hidden;
+.c{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.carousel {
+  position: relative;
+  width: 800px;
+  overflow: hidden;
+  
 }
 
 .carousel-inner {
