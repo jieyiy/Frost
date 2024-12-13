@@ -29,7 +29,7 @@
         <div class="menu"></div>
       </label>
     
-      <div class="menu-list">
+      <div class="menu-list" >
         
           <button class="ac"  value="首頁" onclick="location.href='index.html'">首頁</button> 
           <button class="accordion" >霜玥</button>
@@ -74,7 +74,7 @@
           </div>
           
         </div>
-        
+
           <div class="c">
               <div class="carousel">
                 <div class="carousel-inner">
@@ -94,26 +94,7 @@
           </div>
           <script src="js/script.js"></script>
 
-          <!-- 
-          <div class="imgw" >
-            <div class="white">
-              <img src="img/首頁/image.png" alt="" style="width:1217px;height:824px;" >
-            </div>
-
-            <div class="centerword" >
-                <h2>Ciao...!初次見面<br>
-                  請自由參觀這個屬於霜玥的小小天地叭...!
-                </h2> 
-                <h3>
-                  <br><br><br>
-                  此頁面僅供本人編輯及委託繪師參考使用
-                  網站內所有作品皆禁止抄襲、二度轉載
-                  <br>
-                  Do not copy, imitate, repost my works without permission.
-                </h3> 
-            </div> 
-               
-          </div> -->
+          
       
     </div>
   
@@ -138,48 +119,8 @@
 
 
 
-<script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-        
-        for (i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-              panel.style.maxHeight = null;
-            } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-            } 
-          });
-        }
-
-
-        window.onload = function() {
-
-
-  // 檢查是否已經顯示過過渡畫面
-  if (!sessionStorage.getItem('loadingDone')) {
-    // 顯示 loading 畫面
-    var loadingWrapper = document.getElementById('loading-wrapper');
-    var mainContent = document.getElementById('main-content');
-    
-    // 設定 3 秒後顯示主內容並隱藏 loading
-    setTimeout(function() {
-      loadingWrapper.style.display = 'none'; // 隱藏 loading
-      mainContent.style.display = 'block';   // 顯示主內容
-
-      // 標記已經顯示過 loading 畫面
-      sessionStorage.setItem('loadingDone', 'true');
-    }, 2000); // 3 秒後顯示主內容
-  } else {
-    // 如果已經顯示過過渡畫面，直接顯示主內容
-    document.getElementById('loading-wrapper').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-  }
-};
-</script>
-
+<script src="js/load.js"></script>
+<script src="js/acc.js"></script>
 
 </body>  
 </html>
