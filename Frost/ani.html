@@ -17,7 +17,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(240, 249, 252, 0.9);
+  background-color: #F0F9FC;
   z-index: 9999;
 }
 
@@ -87,6 +87,14 @@
   animation-delay: 0.7s;
 }
 
+.loading-letter:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.loading-letter:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
 /* 字母跳動的動畫 */
 @keyframes jump {
   0%, 100% {
@@ -105,7 +113,7 @@
   <div class="loading-wrapper">
     <div class="loading-container">
       <!-- 顯示的圖片 -->
-      <img src="img/pictures/LOGO.png" alt="Loading Image" class="loading-image" />
+      <img src="img/pictures/LOGO min.png" alt="Loading Image" class="loading-image" />
       
       <!-- 顯示的文字 -->
       <div class="loading-text">
@@ -116,56 +124,12 @@
         <span class="loading-letter">I</span>
         <span class="loading-letter">N</span>
         <span class="loading-letter">G</span>
-        <span class="loading-letter">...</span>
+        <span class="loading-letter">.</span>
+        <span class="loading-letter">.</span>
+        <span class="loading-letter">.</span>
       </div>
     </div>
   </div>
 
-
-  <script>
-  //    window.onload = function() {
-  //const loadingOverlay = document.getElementById('loading-overlay');
-  //const content = document.getElementById('content');
-  //const progressBar = document.getElementById('progress-bar');
-  //const loadingText = document.getElementById('loading-text');
-
-  // 先顯示 loading 層
-  //loadingOverlay.style.display = 'flex';
-
-  // 檢查頁面是否已經完全加載
-  //if (document.readyState === 'complete') {
-    // 如果頁面已經完全加載，直接設置進度條為 100%
-   // progressBar.style.width = '100%';
-    //loadingText.innerText = '頁面加載完成！';
-
-    // 保持進度條顯示為 100% 幾秒
-   // setTimeout(() => {
-      // 隱藏 loading 層，顯示頁面內容
-   //   loadingOverlay.style.display = 'none';
-   //   content.style.display = 'block';
-   // }, 1000);  // 顯示 1 秒鐘，然後隱藏 loading 層
-  //} else {
-    // 如果頁面還在加載，模擬進度條更新
-   // let progress = 0;
-
-    //const interval = setInterval(() => {
-    //  progress += 2; // 每次增加 2% 的進度
-     // progressBar.style.width = progress + '%';
-     // loadingText.innerText = '頁面加載中... ' + progress + '%';
-
-      // 當進度達到 100% 時，隱藏 loading 層，顯示內容
-     // if (progress >= 100) {
-      //  clearInterval(interval);
-
-        // 顯示 100% 進度條後，延遲顯示內容
-       // setTimeout(() => {
-          //loadingOverlay.style.display = 'none';
-         // content.style.display = 'block';
-        //}, 1000);  // 顯示 1 秒鐘，然後隱藏 loading 層
-     // }
-   // }, 50); // 每 50 毫秒更新一次進度條
-  //}
-//};
-  </script>
 </body>
 </html>

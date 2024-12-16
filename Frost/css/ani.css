@@ -1,87 +1,97 @@
+ /* 背景和容器設定 */
+ .loading-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #F0F9FC;
+  z-index: 9999;
+}
 
+/* 內部容器，放圖片和文字 */
+.loading-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .loading-wrapper {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F0F9FC;
+/* 顯示圖片 */
+.loading-image {
+  width: 200px; /* 設定圖片大小 */
+  height: auto;
+  margin-bottom: 30px; /* 設定圖片和文字之間的距離 */
+}
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-  }
-  .container {
-    position: relative;
-    width: 55px;
-    height: 60px;
-    animation: round 1s linear infinite;
-  }
-  .dot {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #376695;
-    border-radius: 50%;
-  }
-  .dot:nth-child(1) {
-    top: 0;
-    left: calc(50% - 7.5px);
-  }
-  .dot:nth-child(2) {
-    top: calc(33.33% - 7.5px);
-    left: calc(100% - 15px);
-  }
-  .dot:nth-child(3) {
-    top: calc(66.67% - 5px);
-    left: calc(100% - 15px);
-  }
-  .dot:nth-child(4) {
-    top: calc(100% - 15px);
-    left: calc(50% - 7.5px);
-  }
-  .dot:nth-child(5) {
-    top: calc(66.67% - 5px);
-    left: 0;
-  }
-  .dot:nth-child(6) {
-    top: calc(33.33% - 7.5px);
-    left: 0;
-  }
+/* 文字容器 */
+.loading-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #376695;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
 
-  .dot {
-    animation: fadeAnimation 1s infinite;
-  }
-  @keyframes fadeAnimation {
-    0%, 100% {
-      opacity: 1;
-      transform: none;
-    }
-    50% {
-      opacity: .1667;
-      transform: scale(.10);
-    }
-  }
+/* 每個字母動畫效果 */
+.loading-letter {
+  display: inline-block;
+  animation: jump 1s ease-in-out infinite;
+}
 
-  .dot:nth-child(1) {
-    animation-delay: 0s;
-  }
-  .dot:nth-child(2) {
-    animation-delay: .1667s;
-  }
-  .dot:nth-child(3) {
-    animation-delay: .3333s;
-  }
-  .dot:nth-child(4) {
-    animation-delay: .5s;
-  }
-  .dot:nth-child(5) {
-    animation-delay: .6667s;
-  }
-  .dot:nth-child(6) {
-    animation-delay: .8333s;
-  }
+/* 使每個字母有不同的延遲時間 */
+.loading-letter:nth-child(1) {
+  animation-delay: 0s;
+}
 
+.loading-letter:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-letter:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loading-letter:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loading-letter:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.loading-letter:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.loading-letter:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.loading-letter:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.loading-letter:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.loading-letter:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+/* 字母跳動的動畫 */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* 字母上跳的距離 */
+  }
+}
