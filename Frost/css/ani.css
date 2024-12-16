@@ -62,7 +62,7 @@
     }
     50% {
       opacity: .1667;
-      transform: scale(.8);
+      transform: scale(.10);
     }
   }
 
@@ -84,3 +84,4 @@
   .dot:nth-child(6) {
     animation-delay: .8333s;
   }
+

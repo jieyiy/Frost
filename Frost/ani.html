@@ -7,123 +7,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loading 頁面</title>
   <style>
-   body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-#loading-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  /* 背景和容器設定 */
+.loading-wrapper {
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(240, 249, 252, 0.9);
   z-index: 9999;
 }
 
-#loading-container {
-  width: 80%;
-  max-width: 400px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
+/* 內部容器，放圖片和文字 */
+.loading-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#progress-bar {
-  width: 0;
-  height: 10px;
-  background-color: #4caf50;
-  margin-bottom: 15px;
+/* 顯示圖片 */
+.loading-image {
+  width: 200px; /* 設定圖片大小 */
+  height: auto;
+  margin-bottom: 30px; /* 設定圖片和文字之間的距離 */
 }
 
-#loading-text {
-  font-size: 18px;
-  color: #333;
+/* 文字容器 */
+.loading-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #376695;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
-#content {
-  padding: 20px;
-  text-align: center;
+/* 每個字母動畫效果 */
+.loading-letter {
+  display: inline-block;
+  animation: jump 1s ease-in-out infinite;
 }
+
+/* 使每個字母有不同的延遲時間 */
+.loading-letter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-letter:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-letter:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loading-letter:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loading-letter:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.loading-letter:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.loading-letter:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.loading-letter:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+/* 字母跳動的動畫 */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* 字母上跳的距離 */
+  }
+}
+
   </style>
+
+
 </head>
 <body>
- <!-- 你的網頁內容 -->
- <div id="loading-overlay">
-    <div id="loading-container">
-      <div id="progress-bar"></div>
-      <p id="loading-text">頁面加載中...</p>
+  <div class="loading-wrapper">
+    <div class="loading-container">
+      <!-- 顯示的圖片 -->
+      <img src="img/pictures/LOGO.png" alt="Loading Image" class="loading-image" />
+      
+      <!-- 顯示的文字 -->
+      <div class="loading-text">
+        <span class="loading-letter">L</span>
+        <span class="loading-letter">O</span>
+        <span class="loading-letter">A</span>
+        <span class="loading-letter">D</span>
+        <span class="loading-letter">I</span>
+        <span class="loading-letter">N</span>
+        <span class="loading-letter">G</span>
+        <span class="loading-letter">...</span>
+      </div>
     </div>
   </div>
 
-  <!-- 內容部分 -->
-  <div id="content" style="display: none;">
-    <h1>歡迎來到我的網站！</h1>
-    <p>這是一個包含大量資源的頁面。</p>
-
-    <div class="images-container">
-      <img src="https://via.placeholder.com/800x600?text=Image+1" alt="Image 1">
-      <img src="https://via.placeholder.com/800x600?text=Image+2" alt="Image 2">
-      <img src="https://via.placeholder.com/800x600?text=Image+3" alt="Image 3">
-      <img src="https://via.placeholder.com/800x600?text=Image+4" alt="Image 4">
-      <img src="https://via.placeholder.com/800x600?text=Image+5" alt="Image 5">
-    </div>
-
-    <p>這些圖片會需要一些時間來加載，並且會顯示 Loading 畫面。</p>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-  </div>
 
   <script>
-      window.onload = function() {
-  const loadingOverlay = document.getElementById('loading-overlay');
-  const content = document.getElementById('content');
-  const progressBar = document.getElementById('progress-bar');
-  const loadingText = document.getElementById('loading-text');
+  //    window.onload = function() {
+  //const loadingOverlay = document.getElementById('loading-overlay');
+  //const content = document.getElementById('content');
+  //const progressBar = document.getElementById('progress-bar');
+  //const loadingText = document.getElementById('loading-text');
 
   // 先顯示 loading 層
-  loadingOverlay.style.display = 'flex';
+  //loadingOverlay.style.display = 'flex';
 
   // 檢查頁面是否已經完全加載
-  if (document.readyState === 'complete') {
+  //if (document.readyState === 'complete') {
     // 如果頁面已經完全加載，直接設置進度條為 100%
-    progressBar.style.width = '100%';
-    loadingText.innerText = '頁面加載完成！';
+   // progressBar.style.width = '100%';
+    //loadingText.innerText = '頁面加載完成！';
 
     // 保持進度條顯示為 100% 幾秒
-    setTimeout(() => {
+   // setTimeout(() => {
       // 隱藏 loading 層，顯示頁面內容
-      loadingOverlay.style.display = 'none';
-      content.style.display = 'block';
-    }, 1000);  // 顯示 1 秒鐘，然後隱藏 loading 層
-  } else {
+   //   loadingOverlay.style.display = 'none';
+   //   content.style.display = 'block';
+   // }, 1000);  // 顯示 1 秒鐘，然後隱藏 loading 層
+  //} else {
     // 如果頁面還在加載，模擬進度條更新
-    let progress = 0;
+   // let progress = 0;
 
-    const interval = setInterval(() => {
-      progress += 2; // 每次增加 2% 的進度
-      progressBar.style.width = progress + '%';
-      loadingText.innerText = '頁面加載中... ' + progress + '%';
+    //const interval = setInterval(() => {
+    //  progress += 2; // 每次增加 2% 的進度
+     // progressBar.style.width = progress + '%';
+     // loadingText.innerText = '頁面加載中... ' + progress + '%';
 
       // 當進度達到 100% 時，隱藏 loading 層，顯示內容
-      if (progress >= 100) {
-        clearInterval(interval);
+     // if (progress >= 100) {
+      //  clearInterval(interval);
 
         // 顯示 100% 進度條後，延遲顯示內容
-        setTimeout(() => {
-          loadingOverlay.style.display = 'none';
-          content.style.display = 'block';
-        }, 1000);  // 顯示 1 秒鐘，然後隱藏 loading 層
-      }
-    }, 50); // 每 50 毫秒更新一次進度條
-  }
-};
+       // setTimeout(() => {
+          //loadingOverlay.style.display = 'none';
+         // content.style.display = 'block';
+        //}, 1000);  // 顯示 1 秒鐘，然後隱藏 loading 層
+     // }
+   // }, 50); // 每 50 毫秒更新一次進度條
+  //}
+//};
   </script>
 </body>
 </html>
