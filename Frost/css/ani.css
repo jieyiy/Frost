@@ -95,3 +95,27 @@
     transform: translateY(-10px); /* 字母上跳的距離 */
   }
 }
+
+
+
+/* 添加淡出加缩放（圆形）动画 */
+@keyframes fadeZoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);  /* 初始大小 */
+    border-radius: 0%;     /* 初始为方形 */
+  }
+  
+  100% {
+    opacity: 0;
+    transform: scale(0);  /* 完全缩小 */
+    border-radius: 100%;   /* 保持圆形 */
+  }
+}
+
+/* 应用动画 */
+.loading-wrapper.fade-zoom-out {
+  animation: fadeZoomOut 0.3s ease-out forwards;
+}
+
+
