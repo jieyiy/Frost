@@ -57,5 +57,15 @@ function hidePopup() {
   popup.style.display = 'none';
 }
 
+// 等待網頁所有資源加載完成後執行
+window.addEventListener('load', function () {
+  // 隱藏 loading 動畫
+  const loading = document.getElementById('loading-wrapper');
+  loading.style.display = 'none';
+
+  // 顯示內容
+  document.body.classList.remove('loading-wrapper');
+});
+
 
 //480 768s
