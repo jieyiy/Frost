@@ -346,14 +346,18 @@ h4{
 
 
 .grid{
-
-    margin-bottom: 0px;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    
-    background-color:#C4DEF1;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
 }
+.g-col-12{
+  grid-column: span 12;
+}
+.g-col-xs-1{grid-column:span 1;}
+
+
+
+
 
 a {
     text-decoration: none;
@@ -549,5 +553,17 @@ a {
   justify-content: center;
 }
 
-a,a:link,a:visited{color:#376695;text-decoration: none}
-a:hover{color:#376695;;text-decoration: none;}
+a,a:link,a:visited{
+  color:#376695;text-decoration: none
+}
+a:hover{
+  color:#376695;;text-decoration: none;
+}
+
+.grid-footer{
+  margin-bottom: 0px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color:#C4DEF1;
+}
