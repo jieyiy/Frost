@@ -431,6 +431,7 @@ a {
     height: 50px;
     padding-top:10px;
     text-align: center;
+    border-radius: 10px;
 }
 .setting-primary{
     width: auto;
