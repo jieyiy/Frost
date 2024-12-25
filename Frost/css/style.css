@@ -347,7 +347,7 @@ h4{
     text-align:center;
     margin-bottom: 0px; 
     
-    position: relative; /* 絕對定位 */
+    position: relative;
     bottom: 0; /* 固定在底部 */
     left: 0;
     right: 0;
@@ -581,4 +581,44 @@ a:hover{
 
 p{
   padding: 0px;
+}
+
+
+/* 返回頂部按鈕的樣式 */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+  padding: 15px 20px;
+  background-color: #3766956a;
+  color: #FFFCE2;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* 初始隱藏 */
+  transition: background-color 0.3s;
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+  text-align: center;
+  line-height: 1; /* 讓箭頭垂直居中 */
+}
+
+/* 按鈕的懸停效果 */
+.scroll-to-top-btn:hover {
+  background-color: #376695;
+}
+
+/* 向上的箭頭樣式 */
+.arrow-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 14px solid #FFFCE2;
+}
+
+/* 滾動超過指定高度時顯示按鈕 */
+.scroll-to-top-btn.show {
+  display: block;
 }
