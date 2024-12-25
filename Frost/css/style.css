@@ -1,4 +1,9 @@
-
+html{
+  padding: 0px;
+    margin: 0px;
+    width:100%;
+    overflow-x:hidden;
+}
 body{
     
     background-color:#F0F9FC;
@@ -8,6 +13,8 @@ body{
     min-height: 100vh;
     padding: 0px;
     margin: 0px;
+    width:100%;
+    overflow-x:hidden;
     
 }
 
@@ -46,6 +53,7 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  
 }
 .logo{
     padding-top: 0px;
@@ -353,7 +361,7 @@ h4{
 .g-col-12{
   grid-column: span 12;
 }
-.g-col-xs-1{grid-column:span 1;}
+
 
 
 
@@ -399,7 +407,7 @@ a {
     width: auto;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
 }
 .images-pixel {
@@ -479,14 +487,15 @@ a {
 }
 
 .gallery img {
-  margin: 10px;
+  
   width: 300px;
   height: auto;
   cursor: pointer;
   border: 2px solid #ddd;
   border-radius: 8px;
   transition: transform 0.2s;
-  margin: 20px 50px;
+  margin: 20px 10px;
+  max-width: 100%;
 }
 
 .gallery img:hover {
