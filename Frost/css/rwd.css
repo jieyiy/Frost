@@ -1,4 +1,4 @@
-@media only screen and (max-width:480px) { 
+@media only screen and (max-width:425px) { 
     
     .icon{
         padding-right: 5px;
@@ -40,19 +40,15 @@
         width: 100px;
         height: auto;
     }
-    .imgw-setting img{
-        
+    .imgw-setting {
+        max-width: 100%;
         display : flex;
         justify-content : center;
         flex-direction: row;
     }
-    .imgw-setting img{
-        width: 60%;
-        height: auto;
-    }
     #setting{
-        width:60%;
-        height:60%;
+        width: 210px;
+        height: 315.6px;
         margin-left: 20px;
         margin-right: 5px;
     }
@@ -67,13 +63,19 @@
         border: 2px solid #ddd;
         border-radius: 8px;
         transition: transform 0.2s;
-        margin: 5px 5px 5px 10px;
+        margin: 0px 5px 5px 10px;
         max-width: 90%;
       }
     .g-col-xs-12{grid-column:span 12;}
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0px 10px;
+    }
 }
 
-@media only screen and (min-width:481px) { 
+@media only screen and (min-width:425px) { 
     
     .icon{
         padding-right: 5px;
@@ -114,19 +116,15 @@
         width: 100px;
         height: auto;
     }
-    .imgw-setting img{
+    .imgw-setting{
         max-width: 100%;
         display : flex;
         justify-content : center;
         flex-direction: row;
     }
-    .imgw-setting img{
-        width: 60%;
-        height: auto;
-    }
-    #setting{
-        width:60%;
-        height: auto;
+    #setting {
+        width: 210px;
+        height: 315.6px;
         margin-left: 20px;
         margin-right: 5px;
     }
@@ -141,10 +139,16 @@
         border: 2px solid #ddd;
         border-radius: 8px;
         transition: transform 0.2s;
-        margin: 5px 10px;
+        margin: 0px 5px 5px 10px;
         max-width: 90%;
       }
     .g-col-xs-12{grid-column:span 12;}
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0px 10px;
+      }
 }
 
 
@@ -177,13 +181,10 @@
         justify-content : center;
         flex-direction: row;
     }
-    .imgw-setting img{
-        width: 80%;
-        height: auto;
-    }
+    
     #setting{
-        width:349.6px;
-        height:526px;
+        width:320px;
+        height:auto;
         margin-right: 30px;
     }
     #setting-text{
@@ -211,10 +212,16 @@
         border: 2px solid #ddd;
         border-radius: 8px;
         transition: transform 0.2s;
-        margin: 20px 10px;
+        margin: 15px 10px;
         max-width: 95%;
       }
     .g-col-sm-1{grid-column:span 1;}
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+      }
 }
 
 
@@ -246,10 +253,6 @@
         justify-content : center;
         flex-direction: row;
     }
-    .imgw-setting img{
-        width: 100%;
-        height: auto;
-    }
     #setting{
         width:349.6px;
         height:526px;
@@ -280,9 +283,15 @@
         border: 2px solid #ddd;
         border-radius: 8px;
         transition: transform 0.2s;
-        margin: 20px 10px;
+        margin: 20px 10px 15px 10px;
         max-width: 100%;
       }
     .g-col-md-6{grid-column:span 6;}
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+      }
 }
    
