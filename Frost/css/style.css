@@ -373,15 +373,15 @@ a {
     text-decoration: none;
 }
 .images{
-    margin : 100px auto;
-    padding : 0px 100px;
+    max-width: 100%;
+    margin: 5px 10px;
     display : flex;
-    justify-content : space-between;
+    justify-content: center;
 }
 
 .sq3{
-  margin-left:5px ;
-  margin-right:5px ;
+  margin:0px 10px;
+  max-width: 100%;
 }
 
 .imgw-setting{

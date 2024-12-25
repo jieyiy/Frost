@@ -8,11 +8,11 @@
     .space{
         width: 120px;
     }
-    h2{
+    .centerw h2{
         font-size:24px;
         font-weight: 600;
     }
-    h3{
+    .centerw h3{
         font-size:16px;
     }
     h4{
@@ -27,6 +27,18 @@
       }
     .text-xs-h4{
         font-size:10px;
+    }
+    .images{
+        max-width: 100%;
+        margin: 5px 10px;
+        display : flex;
+        justify-content: center;
+    }
+    .sq3{
+        width: 100px;
+        height: auto;
+        margin:0px 10px;
+        max-width: 100%;
       }
     .gallery img {
   
@@ -39,7 +51,7 @@
         margin: 5px 10px;
         max-width: 90%;
       }
-    .g-col-xs-6{grid-column:span 6;}
+    .g-col-xs-12{grid-column:span 12;}
 }
 
 
@@ -106,6 +118,6 @@
         margin: 20px 10px;
         max-width: 100%;
       }
-    .g-col-md-1{grid-column:span 1;}
+    .g-col-md-6{grid-column:span 6;}
 }
    
