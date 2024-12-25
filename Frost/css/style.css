@@ -98,6 +98,8 @@ h4{
     padding-right: 30px;
     padding-top: 20px;
     margin-bottom: 0px;
+    width:30px;
+    height:30px;
 
 }
 
@@ -551,7 +553,7 @@ a {
 
 .image {
   width: 100%;
-  margin-bottom: 10px;
+  
 }
 
 .text {
@@ -576,3 +578,4 @@ a:hover{
   justify-content: space-between;
   background-color:#C4DEF1;
 }
+
