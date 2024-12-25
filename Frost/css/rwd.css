@@ -107,7 +107,6 @@
         justify-content: center;
     }
     .sq3{
-        
         margin:0px 10px;
         max-width: 100%;
     }
@@ -126,19 +125,16 @@
         height: auto;
     }
     #setting{
-    
         width:60%;
         height: auto;
         margin-left: 20px;
         margin-right: 5px;
-      
     }
     #setting-text{
         font-size:12px;
         margin-top: 0px;
     }
     .gallery img {
-  
         width: 300px;
         height: auto;
         cursor: pointer;
@@ -186,11 +182,9 @@
         height: auto;
     }
     #setting{
-        
         width:349.6px;
         height:526px;
         margin-right: 30px;
-      
     }
     #setting-text{
         font-size:16px;
@@ -211,7 +205,6 @@
         height: auto;
     }
     .gallery img {
-  
         width: 300px;
         height: auto;
         cursor: pointer;
@@ -258,11 +251,9 @@
         height: auto;
     }
     #setting{
-        
         width:349.6px;
         height:526px;
         margin-right: 30px;
-      
     }
     #setting-text{
         font-size:18px;
@@ -283,7 +274,6 @@
         height: auto;
     }
     .gallery img {
-  
         width: 300px;
         height: auto;
         cursor: pointer;
