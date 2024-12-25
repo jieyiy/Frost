@@ -549,3 +549,6 @@ a {
   display: flex;
   justify-content: center;
 }
+
+a,a:link,a:visited{color:#376695;text-decoration: none}
+a:hover{color:#376695;;text-decoration: none;}
