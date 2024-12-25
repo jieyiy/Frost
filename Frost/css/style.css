@@ -1,4 +1,9 @@
-
+html{
+  padding: 0px;
+    margin: 0px;
+    width:100%;
+    overflow-x:hidden;
+}
 body{
     
     background-color:#F0F9FC;
@@ -8,6 +13,8 @@ body{
     min-height: 100vh;
     padding: 0px;
     margin: 0px;
+    width:100%;
+    overflow-x:hidden;
     
 }
 
@@ -46,6 +53,7 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  
 }
 .logo{
     padding-top: 0px;
@@ -90,6 +98,8 @@ h4{
     padding-right: 30px;
     padding-top: 20px;
     margin-bottom: 0px;
+    width:30px;
+    height:30px;
 
 }
 
@@ -347,28 +357,32 @@ h4{
 
 
 .grid{
-
-    margin-bottom: 0px;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    
-    background-color:#C4DEF1;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
 }
+.g-col-12{
+  grid-column: span 12;
+}
+
+
+
+
+
 
 a {
     text-decoration: none;
 }
 .images{
-    margin : 100px auto;
-    padding : 0px 100px;
+    max-width: 100%;
+    margin: 5px 10px;
     display : flex;
-    justify-content : space-between;
+    justify-content: center;
 }
 
 .sq3{
-  margin-left:5px ;
-  margin-right:5px ;
+  margin:0px 10px;
+  max-width: 100%;
 }
 
 .imgw-setting{
@@ -396,7 +410,7 @@ a {
     width: auto;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
 }
 .images-pixel {
@@ -415,7 +429,7 @@ a {
     color: #3186DA;
     width: 185px;
     height: 50px;
-    padding-top:15px;
+    padding-top:10px;
     text-align: center;
 }
 .setting-primary{
@@ -476,14 +490,15 @@ a {
 }
 
 .gallery img {
-  margin: 10px;
+  
   width: 300px;
   height: auto;
   cursor: pointer;
   border: 2px solid #ddd;
   border-radius: 8px;
   transition: transform 0.2s;
-  margin: 20px 50px;
+  margin: 20px 10px;
+  max-width: 100%;
 }
 
 .gallery img:hover {
@@ -539,7 +554,7 @@ a {
 
 .image {
   width: 100%;
-  margin-bottom: 10px;
+  
 }
 
 .text {
@@ -550,5 +565,18 @@ a {
   justify-content: center;
 }
 
-a,a:link,a:visited{color:#376695;text-decoration: none}
-a:hover{color:#376695;;text-decoration: none;}
+a,a:link,a:visited{
+  color:#376695;text-decoration: none
+}
+a:hover{
+  color:#376695;;text-decoration: none;
+}
+
+.grid-footer{
+  margin-bottom: 0px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color:#C4DEF1;
+}
+
