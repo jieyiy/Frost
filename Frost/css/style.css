@@ -367,8 +367,6 @@ h4{
 
 
 
-
-
 a {
     text-decoration: none;
 }
@@ -380,7 +378,7 @@ a {
 }
 
 .sq3{
-  margin:0px 10px;
+  margin:0px 30px;
   max-width: 100%;
 }
 
@@ -579,3 +577,6 @@ a:hover{
   background-color:#C4DEF1;
 }
 
+p{
+  padding: 0px;
+}
