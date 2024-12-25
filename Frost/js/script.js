@@ -67,5 +67,3 @@ window.addEventListener('load', function () {
   document.body.classList.remove('loading-wrapper');
 });
 
-
-//480 768s
