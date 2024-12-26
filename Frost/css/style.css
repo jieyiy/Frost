@@ -610,7 +610,7 @@ p{
 .scroll-to-top-btn {
   position: fixed;
   bottom: 65px;
-  right: 20px;
+  right: 15px;
   padding: 15px 20px;
   background-color: #3766956a;
   color: #FFFCE2;
@@ -620,7 +620,6 @@ p{
   cursor: pointer;
   display: none; /* 初始隱藏 */
   transition: background-color 0.3s;
-  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
   text-align: center;
   line-height: 1; /* 讓箭頭垂直居中 */
 }
